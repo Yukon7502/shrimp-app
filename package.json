@@ -1,0 +1,17 @@
+{
+  "name": "shrimp-app",
+  "version": "2.0.0",
+  "description": "虾多多 - 养虾饲料动保投喂管理系统（云端同步版）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "generate-icons": "node generate-icons.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
