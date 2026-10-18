@@ -43,7 +43,7 @@
 </head>
 <body>
 <div class="app">
-  <div class="hero"><h1>虾多多</h1><p>按日期、棚号录入；餐次可自由加减，每个餐次可固定动保组合。云端多设备同步。</p></div>
+  <div class="hero"><h1>虾多多</h1><p>按日期、棚号录入；餐次可自由加减，每个餐次可固定动保组合。云端多设备同步。</p><button id="installBtn" class="primary" style="display:none;margin-top:12px;padding:10px 20px;border-radius:999px;background:#fff;color:var(--blue);font-weight:900">📲 安装到桌面</button></div>
 
   <div class="sync-bar">
     <div class="sync-status">
@@ -941,9 +941,32 @@ if ('serviceWorker' in navigator) {
 
 // PWA 安装提示
 let deferredPrompt = null;
+const installBtn = document.getElementById('installBtn');
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
+  if (installBtn) installBtn.style.display = 'inline-block';
+});
+
+if (installBtn) {
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) {
+      alert('请使用 Chrome 浏览器打开本页面，等待页面加载完成后再试。\n\n如果已经安装过，请先卸载后再试。');
+      return;
+    }
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      installBtn.style.display = 'none';
+    }
+    deferredPrompt = null;
+  });
+}
+
+// 检测是否已安装
+window.addEventListener('appinstalled', () => {
+  if (installBtn) installBtn.style.display = 'none';
+  deferredPrompt = null;
 });
 </script>
 </body>
