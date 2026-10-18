@@ -1,12 +1,13 @@
-const CACHE_NAME = 'shrimp-app-v7';
+const CACHE_NAME = 'shrimp-app-v8';
 const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  './icon-192.png',
-  './icon-512.png',
-  './apple-touch-icon.png',
-  './favicon.ico'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png',
+  '/apple-touch-icon.png',
+  '/favicon.ico',
+  '/favicon.png'
 ];
 
 self.addEventListener('install', event => {

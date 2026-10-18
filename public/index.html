@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="虾多多">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="./manifest.json?v=7">
+  <link rel="manifest" href="/manifest.json?v=8">
   <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png">
   <link rel="shortcut icon" href="./favicon.ico">
@@ -934,8 +934,17 @@ init();
 
 // PWA
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=7').catch(()=>{}));
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js?v=8').catch(()=>{});
+  });
 }
+
+// PWA 安装提示
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
 </script>
 </body>
 </html>
