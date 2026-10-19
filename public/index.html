@@ -88,6 +88,7 @@
         <div><label>显示单位</label><select id="summaryUnit"><option value="KG">KG</option><option value="斤">斤</option></select></div>
       </div>
       <h3>各棚投喂汇总</h3><div class="table-wrap"><table id="summaryTable"></table></div>
+      <h3>各棚称料汇总</h3><div class="muted" style="margin-bottom:8px">称料量 = 投喂量 × 1.2</div><div class="table-wrap"><table id="feedSummaryTable"></table></div>
       <h3>每餐动保总用量</h3><div id="additiveSummary"></div>
     </div>
   </section>
@@ -615,6 +616,30 @@ function renderSummary() {
   for (let m=1; m<=maxMeal; m++) html += `<td class="total">${fromKg(mealTotals[m]||0, unit).toFixed(2)}</td>`;
   html += `<td class="total">${fromKg(totalAll, unit).toFixed(2)}</td><td class="total">${fromKg(lifetimeAll, unit).toFixed(2)}</td></tr>`;
   $('summaryTable').innerHTML = html;
+
+  // 各棚称料汇总（投喂量 × 1.2）
+  let feedHtml = '<tr><th>棚号</th>';
+  for (let m=1; m<=maxMeal; m++) feedHtml += `<th>${m}餐(${unit})</th>`;
+  feedHtml += `<th>全天(${unit})</th><th>该棚累计称料(${unit})</th></tr>`;
+  let feedTotalAll = 0, feedLifetimeAll = 0, feedMealTotals = {};
+  for (let i=1; i<=summaryMaxShed; i++) {
+    const r = summary[i] || { meals:{}, total:0, count:0 };
+    const feedTotal = r.total * 1.2;
+    const feedLifetime = (shedLifetimeTotals[i]||0) * 1.2;
+    feedTotalAll += feedTotal;
+    feedLifetimeAll += feedLifetime;
+    feedHtml += `<tr><td>${i}号</td>`;
+    for (let m=1; m<=maxMeal; m++) {
+      const feedMeal = (r.meals[m]||0) * 1.2;
+      feedMealTotals[m] = (feedMealTotals[m]||0) + feedMeal;
+      feedHtml += `<td>${fromKg(feedMeal, unit).toFixed(2)}</td>`;
+    }
+    feedHtml += `<td class="total">${fromKg(feedTotal, unit).toFixed(2)}</td><td class="total">${fromKg(feedLifetime, unit).toFixed(2)}</td></tr>`;
+  }
+  feedHtml += `<tr><td class="strong">${summaryMaxShed}棚合计</td>`;
+  for (let m=1; m<=maxMeal; m++) feedHtml += `<td class="total">${fromKg(feedMealTotals[m]||0, unit).toFixed(2)}</td>`;
+  feedHtml += `<td class="total">${fromKg(feedTotalAll, unit).toFixed(2)}</td><td class="total">${fromKg(feedLifetimeAll, unit).toFixed(2)}</td></tr>`;
+  $('feedSummaryTable').innerHTML = feedHtml;
 
   const groups = {};
   Object.values(additives).sort((a,b) => a.meal - b.meal || recipeOrder(a.name) - recipeOrder(b.name) || a.name.localeCompare(b.name)).forEach(x => {
