@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8a5c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84c1f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bodyLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb088;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#ff7a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0451a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d63a12;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000033"/>
+    </filter>
+    <filter id="gloss">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 白底圆角方形背景 -->
+  <rect x="32" y="32" width="448" height="448" rx="80" ry="80" fill="#ffffff" filter="url(#shadow)"/>
+
+  <!-- 水花（底部，浅蓝） -->
+  <g opacity="0.7">
+    <ellipse cx="256" cy="400" rx="140" ry="18" fill="#8ed8ec"/>
+    <ellipse cx="200" cy="388" rx="40" ry="12" fill="#b5e6f2"/>
+    <ellipse cx="300" cy="392" rx="50" ry="14" fill="#a8e0ee"/>
+    <ellipse cx="260" cy="382" rx="25" ry="8" fill="#d0eef7"/>
+    <!-- 水滴 -->
+    <path d="M120 340 Q115 320 130 310 Q145 320 140 340 Q135 352 120 340Z" fill="#7ecde3"/>
+    <path d="M380 310 Q375 290 390 280 Q405 290 400 310 Q395 322 380 310Z" fill="#7ecde3"/>
+    <path d="M400 370 Q397 358 407 350 Q417 358 414 370 Q410 378 400 370Z" fill="#8ed8ec"/>
+    <circle cx="140" cy="300" r="5" fill="#9fdcea"/>
+    <circle cx="395" cy="260" r="4" fill="#9fdcea"/>
+    <circle cx="105" cy="375" r="3" fill="#9fdcea"/>
+  </g>
+
+  <!-- 虾身体 -->
+  <g transform="translate(90, 80)">
+    <!-- 尾巴 -->
+    <path d="M240 260 Q270 280 290 305 Q275 320 255 318 Q245 332 240 345 Q220 340 208 328 Q200 312 208 300 Q220 285 240 260Z"
+          fill="url(#tailGrad)" stroke="#d63a12" stroke-width="3"/>
+    <path d="M240 270 Q260 288 272 308" fill="none" stroke="#ffb088" stroke-width="3" opacity="0.6"/>
+    <path d="M232 315 Q245 330 240 343" fill="none" stroke="#d63a12" stroke-width="2" opacity="0.5"/>
+
+    <!-- 第六节（最靠近尾巴） -->
+    <ellipse cx="220" cy="235" rx="48" ry="42" fill="url(#bodyLight)" stroke="#d63a12" stroke-width="3" transform="rotate(-20 220 235)"/>
+    <path d="M185 222 Q210 205 245 215" fill="none" stroke="#d63a12" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="230" cy="220" rx="10" ry="5" fill="#ffffff" opacity="0.4" transform="rotate(-20 230 220)"/>
+
+    <!-- 第五节 -->
+    <ellipse cx="185" cy="205" rx="46" ry="40" fill="url(#bodyLight)" stroke="#d63a12" stroke-width="3" transform="rotate(-5 185 205)"/>
+    <path d="M152 195 Q175 180 208 188" fill="none" stroke="#d63a12" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="195" cy="190" rx="10" ry="5" fill="#ffffff" opacity="0.4" transform="rotate(-5 195 190)"/>
+
+    <!-- 第四节 -->
+    <ellipse cx="155" cy="175" rx="44" ry="38" fill="url(#bodyLight)" stroke="#d63a12" stroke-width="3"/>
+    <path d="M123 166 Q145 153 175 160" fill="none" stroke="#d63a12" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="165" cy="160" rx="10" ry="5" fill="#ffffff" opacity="0.4"/>
+
+    <!-- 第三节 -->
+    <ellipse cx="130" cy="145" rx="42" ry="36" fill="url(#bodyLight)" stroke="#d63a12" stroke-width="3" transform="rotate(10 130 145)"/>
+    <path d="M100 138 Q120 125 148 132" fill="none" stroke="#d63a12" stroke-width="2.5" opacity="0.7"/>
+    <ellipse cx="140" cy="130" rx="9" ry="4" fill="#ffffff" opacity="0.4" transform="rotate(10 140 130)"/>
+
+    <!-- 头胸甲（头部+胸部） -->
+    <path d="M50 130 Q35 100 55 75 Q90 55 140 60 Q180 65 200 90 Q210 115 200 140 Q185 160 155 168 Q115 172 75 165 Q50 155 50 130Z"
+          fill="url(#bodyLight)" stroke="#d63a12" stroke-width="3"/>
+    <!-- 头胸甲光泽 -->
+    <ellipse cx="110" cy="85" rx="25" ry="8" fill="#ffffff" opacity="0.5"/>
+    <ellipse cx="155" cy="100" rx="15" ry="5" fill="#ffffff" opacity="0.35"/>
+    <ellipse cx="85" cy="110" rx="10" ry="4" fill="#ffffff" opacity="0.3"/>
+
+    <!-- 额剑（虾的尖鼻子） -->
+    <path d="M50 115 Q20 105 -5 98 Q20 108 50 120Z"
+          fill="url(#bodyGrad)" stroke="#d63a12" stroke-width="2.5"/>
+    <path d="M45 112 Q15 103 0 98" fill="none" stroke="#ffb088" stroke-width="2" opacity="0.5"/>
+    <!-- 额剑锯齿（上缘） -->
+    <path d="M38 105 L32 97 L40 102Z" fill="#d63a12" opacity="0.6"/>
+    <path d="M25 101 L18 93 L27 98Z" fill="#d63a12" opacity="0.6"/>
+    <!-- 额剑锯齿（下缘） -->
+    <path d="M35 118 L28 123 L35 115Z" fill="#d63a12" opacity="0.5"/>
+
+    <!-- 眼睛 -->
+    <ellipse cx="90" cy="105" rx="11" ry="13" fill="#2a1a0f"/>
+    <ellipse cx="93" cy="100" rx="4" ry="5" fill="#ffffff"/>
+    <ellipse cx="55" cy="110" rx="6" ry="4" fill="#6b3420" opacity="0.6"/>
+
+    <!-- 微笑 -->
+    <path d="M100 130 Q115 142 130 132" fill="none" stroke="#8b2508" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- 触须 -->
+    <path d="M60 90 Q40 60 80 35 Q140 15 200 25 Q240 35 260 55" fill="none" stroke="#ff6b3d" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M58 105 Q30 95 50 55 Q80 20 150 15 Q210 18 255 40" fill="none" stroke="#ff8a5c" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- 口器/小颚须 -->
+    <path d="M55 140 Q35 145 30 160 Q45 158 58 150" fill="none" stroke="#d63a12" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M50 150 Q35 160 38 175 Q48 170 55 158" fill="none" stroke="#d63a12" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- 步足（腿） -->
+    <!-- 第一对 -->
+    <path d="M115 170 Q108 195 100 220 Q108 230 115 222 Q122 200 125 175" fill="#ff7a4a" stroke="#d63a12" stroke-width="2.5"/>
+    <!-- 第二对 -->
+    <path d="M150 178 Q148 205 140 232 Q150 240 158 230 Q165 208 162 182" fill="#ff7a4a" stroke="#d63a12" stroke-width="2.5"/>
+    <!-- 第三对 -->
+    <path d="M180 195 Q182 220 178 245 Q188 250 195 238 Q200 215 195 198" fill="#ff7a4a" stroke="#d63a12" stroke-width="2.5"/>
+    <!-- 第四对 -->
+    <path d="M205 215 Q212 238 208 260 Q218 263 225 250 Q228 228 220 218" fill="#ff7a4a" stroke="#d63a12" stroke-width="2.5"/>
+    <!-- 第五对 -->
+    <path d="M225 235 Q235 255 232 275 Q242 277 248 262 Q248 242 238 238" fill="#ff7a4a" stroke="#d63a12" stroke-width="2.5"/>
+
+    <!-- 游泳足（腹部小爪） -->
+    <path d="M170 230 Q165 245 175 252 Q182 245 180 232" fill="#ff8a5c" stroke="#d63a12" stroke-width="1.5" opacity="0.8"/>
+    <path d="M200 248 Q198 262 208 268 Q215 260 212 248" fill="#ff8a5c" stroke="#d63a12" stroke-width="1.5" opacity="0.8"/>
+    <path d="M225 262 Q225 275 235 280 Q242 273 238 262" fill="#ff8a5c" stroke="#d63a12" stroke-width="1.5" opacity="0.8"/>
+  </g>
+</svg>

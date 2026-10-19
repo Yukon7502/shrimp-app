@@ -27,13 +27,14 @@
     .card{background:#fff;border-radius:20px;padding:16px;margin-bottom:14px;box-shadow:0 8px 26px #16243a14}h2{margin:0 0 14px;font-size:21px}h3{margin:18px 0 10px;font-size:17px}
     label,.label{display:block;margin:10px 0 6px;color:#526070;font-size:14px}input,select,textarea{width:100%;min-height:44px;border:1px solid var(--line);border-radius:12px;background:#fbfdff;color:var(--text);font:inherit;padding:10px 12px}textarea{min-height:84px;resize:vertical}.date-input{min-height:58px;font-size:20px;font-weight:900;text-align:center;background:#fff}#shed.unsaved{border-color:#f59e0b;background:#fff7ed;box-shadow:0 0 0 3px rgba(245,158,11,.18)}
     button{min-height:40px;border:0;border-radius:12px;padding:0 12px;font:inherit;font-weight:800;cursor:pointer}.primary{background:var(--blue);color:#fff}.secondary{background:#edf6fa;color:#0f5f8f}.danger{background:#fff2f2;color:var(--danger)}
-    .row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.actions button{flex:1;min-width:96px}
+    .row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.row.equal-h > div > input,.row.equal-h > div > select,.row.equal-h > div > button{min-height:52px;height:52px;font-size:17px;font-weight:800}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.actions button{flex:1;min-width:96px}.full{width:100%}
     .meal-block{margin-top:14px;padding:14px;border:1px solid #dfe8f1;border-radius:16px;background:#fbfdff}.meal-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.meal-save-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.meal-save-actions button{min-width:120px}.meal-head{display:grid;grid-template-columns:1fr 100px 120px auto;gap:8px;align-items:end}.meal-title{font-size:18px;font-weight:900;color:var(--blue)}
     .group-location{max-width:420px;margin:0 auto 12px;text-align:center}.group-location input{text-align:center;font-size:18px;font-weight:900;background:#fff}
     .operator-box{text-align:right}.operator-box label{margin:0 0 4px;font-size:12px;color:var(--muted)}.operator-box input{min-height:36px;font-size:15px}
     .additive-list{display:grid;gap:8px}.add-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}.move-group{display:flex;gap:6px}.move-group button{min-width:38px;padding:0 8px}
     .split{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.strong{font-weight:900}.muted{color:var(--muted);font-size:13px;line-height:1.55}.amount{color:var(--blue);font-weight:900;white-space:nowrap}.empty{padding:18px;text-align:center;color:var(--muted);background:#f8fbfd;border-radius:14px}
     .result,.record,.recipe{border-bottom:1px solid #edf2f7;padding:11px 0}.pill{display:inline-block;padding:3px 8px;margin:2px;border-radius:999px;background:#e8f5ff;color:var(--blue);font-size:12px}
+    .date-group{margin-bottom:10px;border:1px solid #e2eaf2;border-radius:14px;overflow:hidden}.date-header{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#f3f7fb;cursor:pointer;user-select:none}.date-arrow{color:var(--blue);font-size:12px;width:16px;text-align:center}.date-header .muted{margin-left:auto;font-size:12px}.date-body{padding:0 14px;background:#fff}.date-body .record:last-child{border-bottom:none}
     .table-wrap{overflow:auto;border:1px solid #e2eaf2;border-radius:14px;max-height:70vh}table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;min-width:780px}th,td{padding:10px;border-bottom:1px solid #edf2f7;text-align:center;font-size:14px}th{background:#1f4e78;color:#fff}.total{background:#eaf6ff;color:var(--blue);font-weight:900}#summaryTable th{position:sticky;top:0;z-index:4;background:#1f4e78;color:#fff}#summaryTable th:first-child,#summaryTable td:first-child{position:sticky;left:0;z-index:2;width:48px;min-width:48px;max-width:48px;padding-left:4px;padding-right:4px;box-shadow:2px 0 6px #16243a18;white-space:nowrap}#summaryTable th:first-child{top:0;left:0;z-index:5;background:#1f4e78;color:#fff}#summaryTable td:first-child{background:#fff;font-weight:800}#summaryTable tr:last-child td:first-child{background:#eaf6ff;color:var(--blue);font-weight:900;font-size:12px}
     .recipe-line{display:grid;grid-template-columns:minmax(84px,1.1fr) minmax(88px,1fr) 78px minmax(88px,1fr) 78px 44px 56px;gap:8px;align-items:center}.drag-handle{display:flex;align-items:center;justify-content:center;height:40px;border-radius:10px;background:#eef4fa;color:#0f5f8f;font-weight:900;cursor:grab;user-select:none;touch-action:none}.recipe.drag-over{outline:2px dashed var(--blue);outline-offset:2px;border-radius:12px}.recipe.dragging{opacity:.55}.hidden{display:none}.notice{background:#fff8e6;color:#7a4b00;border:1px solid #ffe0a3;border-radius:14px;padding:12px;line-height:1.6}
     .calendar-mask{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:20;display:none;align-items:center;justify-content:center;padding:14px}.calendar{width:min(520px,100%);background:#fff;border-radius:22px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.24)}.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.calendar-title{font-size:22px;font-weight:900;color:var(--blue)}.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.calendar-cell{min-height:52px;border-radius:14px;background:#f5f8fb;color:#172033;font-weight:900}.calendar-cell.week{background:#fff;color:#667085;min-height:30px}.calendar-cell.active{background:var(--blue);color:#fff}.calendar-cell.blank{background:transparent}
@@ -61,12 +62,13 @@
     <div class="card">
       <div class="split"><h2>录入</h2><div class="operator-box"><label>操作员</label><input id="operatorInput" type="text" placeholder="请输入姓名" style="min-width:120px;text-align:center;font-weight:900"></div></div>
       <div class="group-location"><label>棚所在位置</label><input id="groupLocation" type="text" placeholder="例如 百亩塘1组"></div>
-      <div class="row">
+      <div class="row equal-h">
         <div><label>日期</label><input id="date" class="date-input" type="text" readonly onclick="openCalendar('date')"></div>
-        <div><label>棚号</label><select id="shed"></select><div class="actions"><button class="secondary" type="button" onclick="changeShed(-1)">上一个</button><button class="secondary" type="button" onclick="changeShed(1)">下一个</button></div></div>
+        <div><label>棚号</label><select id="shed"></select></div>
+        <div><label>&nbsp;</label><button class="secondary full" type="button" onclick="changeShed(-1)">上一个</button></div>
+        <div><label>&nbsp;</label><button class="secondary full" type="button" onclick="changeShed(1)">下一个</button></div>
       </div>
       <div id="mealBlocks"></div>
-      <div class="actions"><button class="secondary" id="addMealBtn" type="button">增加餐次</button></div>
       <label>备注</label><textarea id="note" placeholder="可填写特殊情况"></textarea>
       <div class="actions"><button class="secondary" id="clearBtn">清空当前日期录入栏</button></div>
     </div>
@@ -76,6 +78,10 @@
   <section id="list" class="panel hidden">
     <div class="card">
       <div class="split"><h2>投喂记录</h2><div class="actions" style="margin-top:0"><button class="secondary" id="exportBtn">导出CSV</button><button class="danger" id="clearAllBtn">清空</button></div></div>
+      <div class="row">
+        <div><label>筛选棚号</label><select id="filterShed"><option value="">全部棚号</option></select></div>
+        <div><label>筛选餐次</label><select id="filterMeal"><option value="">全部餐次</option></select></div>
+      </div>
       <div id="records"></div>
     </div>
   </section>
@@ -85,10 +91,15 @@
       <div class="split"><h2>每日汇总</h2><div class="actions" style="margin-top:0"><button class="secondary" id="exportAllTableBtn">导出全部记录表格</button></div></div>
       <div class="row">
         <div><label>汇总日期</label><input id="summaryDate" class="date-input" type="text" readonly onclick="openCalendar('summaryDate')"></div>
-        <div><label>显示单位</label><select id="summaryUnit"><option value="KG">KG</option><option value="斤">斤</option></select></div>
+        <div><label>显示单位</label><select id="summaryUnit"><option value="斤">斤</option><option value="KG">KG</option></select></div>
       </div>
       <h3>各棚投喂汇总</h3><div class="table-wrap"><table id="summaryTable"></table></div>
-      <h3>各棚称料汇总</h3><div class="muted" style="margin-bottom:8px">称料量 = 投喂量 × 1.2</div><div class="table-wrap"><table id="feedSummaryTable"></table></div>
+      <h3>各棚称料汇总</h3>
+      <div class="row" style="margin-bottom:8px">
+        <div><label>称料系数</label><input id="feedFactor" type="number" step="0.01" value="1.2" style="width:100px"></div>
+        <div style="align-self:center" class="muted">称料量 = 投喂量 × 系数</div>
+      </div>
+      <div class="table-wrap"><table id="feedSummaryTable"></table></div>
       <h3>每餐动保总用量</h3><div id="additiveSummary"></div>
     </div>
   </section>
@@ -130,7 +141,7 @@ const num = v => { const n=Number(v); return Number.isFinite(n)?n:0; };
 const toKg = (v,u) => u==='斤'?num(v)*0.5:num(v);
 const fromKg = (v,u) => u==='斤'?num(v)*2:num(v);
 const today = () => { const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
-const feedText = r => { const u=r.feedUnit||'KG', v=num(r.feedWeight??r.weight), kg=toKg(v,u); return u==='斤'?`${v.toFixed(2)}斤（${kg.toFixed(2)}KG）`:`${v.toFixed(2)}KG`; };
+const feedText = r => { const u=r.feedUnit||'斤', v=num(r.feedWeight??r.weight), kg=toKg(v,u); return u==='斤'?`${v.toFixed(2)}斤（${kg.toFixed(2)}KG）`:`${v.toFixed(2)}KG`; };
 const isWaterName = name => /^水\d+%$/.test(name||'');
 const waterPercent = name => { const m=String(name||'').match(/水(\d+(?:\.\d+)?)%/); return m?num(m[1])/100:0; };
 const waterPercentValue = value => num(value)/100;
@@ -173,7 +184,12 @@ let syncTimer = null;
 // ========== 配方工具 ==========
 function recipeMap(){ return Object.fromEntries(recipes.map(r=>[r.name,r])); }
 function recipeOrder(name){ const i=recipes.findIndex(r=>r.name===name); return i>=0?i:9999; }
-function sortAdds(list){ return (list||[]).filter(x=>x&&!isWaterName(x)).sort((a,b)=>recipeOrder(a)-recipeOrder(b)||a.localeCompare(b)); }
+function sortAdds(list){ return (list||[]).filter(x=>!isWaterName(x)).sort((a,b)=>{
+  if(!a && !b) return 0;
+  if(!a) return 1;
+  if(!b) return -1;
+  return recipeOrder(a)-recipeOrder(b)||a.localeCompare(b);
+}); }
 function saveMealsLocal(){
   meals.forEach(m=>m.adds=sortAdds(m.adds));
   localCache.set('shrimp_meals', meals.map(m=>({id:m.id, adds:sortAdds(m.adds), waterPercent:m.waterPercent||''})));
@@ -310,36 +326,41 @@ function optionHtml(selected) {
 }
 
 function readDraft() {
-  meals.forEach((m,i) => {
-    const n = i+1;
-    m.feedWeight = $(`mealWeight${n}`)?.value || m.feedWeight || '';
-    m.feedUnit = $(`mealUnit${n}`)?.value || m.feedUnit || 'KG';
-    m.waterPercent = $(`mealWater${n}`)?.value ?? m.waterPercent ?? '';
-    const selects = [...document.querySelectorAll(`[data-meal-add="${i}"]`)];
-    if (selects.length) m.adds = selects.map(s => s.value);
-  });
+  // 只读当前显示的那一餐
+  const idx = Number($('mealSelect')?.value || 0);
+  if (!meals[idx]) return;
+  const m = meals[idx];
+  const n = idx + 1;
+  m.feedWeight = $(`mealWeight${n}`)?.value ?? m.feedWeight ?? '';
+  m.feedUnit = $(`mealUnit${n}`)?.value || m.feedUnit || '斤';
+  m.waterPercent = $(`mealWater${n}`)?.value ?? m.waterPercent ?? '';
+  const selects = [...document.querySelectorAll(`[data-meal-add="${idx}"]`)];
+  if (selects.length) m.adds = selects.map(s => s.value);
 }
 
 function renderMealBlocks(skipRead=false) {
   if (!skipRead) readDraft();
-  $('mealBlocks').innerHTML = meals.map((m,i) => {
-    const blankCount = (m.adds||[]).filter(x=>!x).length;
-    m.adds = sortAdds(m.adds);
-    const meal = i+1, adds = m.adds.slice();
-    const blanksToShow = blankCount || (adds.length ? 0 : 1);
-    for (let b=0; b<blanksToShow; b++) adds.push('');
-    const addRows = adds.map((name,idx) =>
-      `<div class="add-row"><select data-meal-add="${i}" onchange="updateMealAdditive(${i},${idx},this.value)"><option value="">请选择动保</option>${optionHtml(name)}</select><button class="danger" type="button" onclick="removeMealAdditive(${i},${idx})">删除</button></div>`
-    ).join('');
-    const deleteMealBtn = i >= 3 ? `<button class="danger" type="button" onclick="removeMeal(${i})">删除餐次</button>` : `<span></span>`;
-    const sameAmountBtn = i === 0 ? `<button class="secondary" type="button" onclick="copyFirstMealWeight()">后面餐次同第一餐投喂量</button>` : '';
-    return `<div class="meal-block"><div class="meal-top"><div class="meal-title">${meal}餐</div><div class="meal-save-actions"><button class="primary" type="button" onclick="saveRecord()">保存</button>${sameAmountBtn}</div></div><div class="meal-head"><div><label>喂餐量</label><input id="mealWeight${meal}" type="text" inputmode="decimal" value="${m.feedWeight||''}" placeholder="填本餐喂料" oninput="renderCurrentResult()"></div><div><label>单位</label><select id="mealUnit${meal}" onchange="renderCurrentResult()"><option value="KG" ${(m.feedUnit||'KG')==='KG'?'selected':''}>KG</option><option value="斤" ${m.feedUnit==='斤'?'selected':''}>斤</option></select></div><div><label>加水%</label><input id="mealWater${meal}" type="text" inputmode="decimal" value="${m.waterPercent||''}" placeholder="例如20" oninput="renderCurrentResult()"></div>${deleteMealBtn}</div><div class="label">本餐需要添加的动保</div><div class="additive-list">${addRows}</div><div class="actions"><button class="secondary" type="button" onclick="addMealAdditive(${i})">增加动保</button></div></div>`;
-  }).join('');
+  // 确保至少有4餐
+  while (meals.length < 4) meals.push({id:String(Date.now()+meals.length), adds:[], feedWeight:'', feedUnit:'斤', waterPercent:''});
+  const idx = Number($('mealSelect')?.value || 0);
+  const m = meals[idx] || meals[0];
+  const meal = idx + 1;
+  m.adds = sortAdds(m.adds);
+  // 如果没有动保，显示一个空白行方便选择
+  if (!m.adds || m.adds.length === 0) {
+    m.adds = [''];
+  }
+  const adds = m.adds.slice();
+  const addRows = adds.map((name,addIdx) =>
+    `<div class="add-row"><select data-meal-add="${idx}" onchange="updateMealAdditive(${idx},${addIdx},this.value)"><option value="">请选择动保</option>${optionHtml(name)}</select><button class="danger" type="button" onclick="removeMealAdditive(${idx},${addIdx})">删除</button></div>`
+  ).join('');
+  const sameAmountBtn = idx === 0 ? `<button class="secondary" type="button" onclick="copyFirstMealWeight()">后面餐次同第一餐投喂量</button>` : '';
+  $('mealBlocks').innerHTML = `<div class="meal-block"><div class="meal-top"><div class="meal-title"><select id="mealSelect" onchange="onMealSelectChange()" style="min-width:100px"><option value="0" ${idx===0?'selected':''}>1餐</option><option value="1" ${idx===1?'selected':''}>2餐</option><option value="2" ${idx===2?'selected':''}>3餐</option><option value="3" ${idx===3?'selected':''}>4餐</option></select></div><div class="meal-save-actions"><button class="primary" type="button" onclick="saveRecord()">保存</button>${sameAmountBtn}</div></div><div class="meal-head"><div><label>喂餐量</label><input id="mealWeight${meal}" type="text" inputmode="decimal" value="${m.feedWeight||''}" placeholder="填本餐喂料" oninput="renderCurrentResult()"></div><div><label>单位</label><select id="mealUnit${meal}" onchange="renderCurrentResult()"><option value="斤" ${(m.feedUnit||'斤')==='斤'?'selected':''}>斤</option><option value="KG" ${m.feedUnit==='KG'?'selected':''}>KG</option></select></div><div><label>加水%</label><input id="mealWater${meal}" type="text" inputmode="decimal" value="${m.waterPercent||''}" placeholder="例如20" oninput="renderCurrentResult()"></div></div><div class="label">本餐需要添加的动保</div><div class="additive-list">${addRows}</div><div class="actions"><button class="secondary" type="button" onclick="addMealAdditive(${idx})">增加动保</button></div></div>`;
 }
 
 function addMeal() {
   readDraft();
-  meals.push({id:String(Date.now()), adds:[], feedWeight:'', feedUnit:'KG', waterPercent:''});
+  meals.push({id:String(Date.now()), adds:[], feedWeight:'', feedUnit:'斤', waterPercent:''});
   saveMealsLocal();
   renderMealBlocks(true);
   renderCurrentResult();
@@ -359,15 +380,23 @@ function copyFirstMealWeight() {
   if (!first.feedWeight || num(first.feedWeight) <= 0) { alert('请先填写第一餐喂餐量'); return; }
   for (let i=1; i<meals.length; i++) {
     meals[i].feedWeight = first.feedWeight;
-    meals[i].feedUnit = first.feedUnit || 'KG';
+    meals[i].feedUnit = first.feedUnit || '斤';
   }
+  renderMealBlocks(true);
+  renderCurrentResult();
+}
+function onMealSelectChange() {
+  readDraft();
+  saveMealsLocal();
   renderMealBlocks(true);
   renderCurrentResult();
 }
 function addMealAdditive(i) {
   readDraft();
   meals[i].adds = meals[i].adds || [];
+  // 只在点击增加按钮时才新增一行
   meals[i].adds.push('');
+  saveMealsLocal();
   renderMealBlocks(true);
   renderCurrentResult();
 }
@@ -379,10 +408,24 @@ function updateMealAdditive(i, j, v) {
   renderMealBlocks(true);
   renderCurrentResult();
 }
-function removeMealAdditive(i, j) {
-  if (!confirm('确认删除这个动保选择吗？')) return;
-  readDraft();
-  meals[i].adds.splice(j, 1);
+function removeMealAdditive(mealIdx, rowIdx) {
+  // 第一时间弹确认框，点取消直接返回，什么都不做
+  var ok = confirm('确认删除这个动保吗？');
+  if (ok !== true) {
+    return;
+  }
+  // 确认后才执行删除 - 从DOM读取当前所有行，和用户看到的完全一致
+  var rows = document.querySelectorAll('#mealBlocks .add-row');
+  var newValues = [];
+  for (var i = 0; i < rows.length; i++) {
+    if (i !== rowIdx) {
+      var sel = rows[i].querySelector('select');
+      if (sel) newValues.push(sel.value);
+    }
+  }
+  // 更新数据
+  if (!meals[mealIdx]) meals[mealIdx] = {adds:[]};
+  meals[mealIdx].adds = newValues;
   saveMealsLocal();
   renderMealBlocks(true);
   renderCurrentResult();
@@ -393,7 +436,7 @@ function renderCurrentResult() {
   const map = recipeMap();
   const rows = [];
   meals.forEach((m, i) => {
-    const meal = i+1, w = toKg(m.feedWeight, m.feedUnit||'KG');
+    const meal = i+1, w = toKg(m.feedWeight, m.feedUnit||'斤');
     if (w <= 0) return;
     const adds = mealAdds(i);
     const details = adds.map(name => {
@@ -417,7 +460,7 @@ function renderCurrentResult() {
 }
 
 function clearDraftOnly() {
-  meals.forEach(m => { m.feedWeight=''; m.feedUnit = m.feedUnit||'KG'; });
+  meals.forEach(m => { m.feedWeight=''; m.feedUnit = m.feedUnit||'斤'; });
   $('note').value = '';
   renderMealBlocks();
   renderCurrentResult();
@@ -442,7 +485,7 @@ async function saveRecord() {
   const newRecords = [];
   meals.forEach((m, i) => {
     const feedWeight = num(m.feedWeight);
-    const feedUnit = m.feedUnit || 'KG';
+    const feedUnit = m.feedUnit || '斤';
     if (feedWeight <= 0) return;
     const adds = mealAdds(i);
     const waterPercent = m.waterPercent || '';
@@ -519,15 +562,18 @@ function editRecord(id) {
   if (num(r.shed) > maxShed) { maxShed = num(r.shed); renderShedOptions(); }
   $('shed').value = String(r.shed);
   $('groupLocation').value = r.groupLocation || '';
-  while (meals.length < Number(r.meal)) meals.push({id:String(Date.now()+meals.length), adds:[], waterPercent:''});
+  // 确保有4餐
+  while (meals.length < 4) meals.push({id:String(Date.now()+meals.length), adds:[], waterPercent:''});
   const idx = Number(r.meal) - 1;
   meals[idx].feedWeight = r.feedWeight ?? r.weight;
-  meals[idx].feedUnit = r.feedUnit || 'KG';
+  meals[idx].feedUnit = r.feedUnit || '斤';
   meals[idx].waterPercent = r.waterPercent ?? (r.waterName ? String(waterPercent(r.waterName)*100) : '');
   if (r.adds && r.adds.length) meals[idx].adds = r.adds.slice();
   $('note').value = r.note || '';
+  // 跳到对应餐次
+  $('mealSelect').value = String(idx);
   saveMealsLocal();
-  renderMealBlocks();
+  renderMealBlocks(true);
   renderCurrentResult();
   switchTab('record');
   window.scrollTo({top:0, behavior:'smooth'});
@@ -554,26 +600,82 @@ async function deleteRecord(id) {
 }
 
 function renderRecords() {
-  const sorted = records.slice().sort((a,b) => b.date.localeCompare(a.date) || Number(a.shed)-Number(b.shed) || Number(a.meal)-Number(b.meal));
-  if (!sorted.length) { $('records').innerHTML = '<div class="empty">暂无记录。</div>'; return; }
-  $('records').innerHTML = sorted.map(r => {
-    const details = recordAddDetails(r);
-    const waterPct = recordWaterPercent(r);
-    const waterName = waterLabel(waterPct);
-    const waterJin = num(waterPct) > 0 ? num(r.waterAmountJin) : 0;
-    const adds = details.map(x => `<span class="pill">${x.name}</span>`).join('') + (waterName ? `<span class="pill">${waterName}</span>` : '') || '未选择';
-    const amount = details.map(x => `${x.name}: ${calcAmount(r.weight,x.dose,x.baseQty,x.baseUnit).toFixed(3)}${x.unit}`)
-      .concat(waterName ? [`${waterName}: ${waterJin.toFixed(3)}斤`] : []).join('；') || '无';
-    const opTime = r.operatedAt ? new Date(r.operatedAt).toLocaleString('zh-CN') : '';
-    const opLine = (r.operator || opTime) ? `<div class="muted">操作：${r.operator || '未知'}${opTime ? ' · ' + opTime : ''}</div>` : '';
-    return `<div class="record"><div class="split"><div class="strong">${r.date} · ${r.groupLocation?`${r.groupLocation} · `:''}${r.shed}号棚 · ${r.meal}餐</div><div class="amount">${feedText(r)}</div></div><div class="muted">动保/水：${adds}</div><div class="muted">应添加：${amount}</div>${opLine}${r.note?`<div class="muted">备注：${r.note}</div>`:''}<div class="actions"><button class="secondary" onclick="editRecord('${r.id}')">修改</button><button class="danger" onclick="deleteRecord('${r.id}')">删除</button></div></div>`;
-  }).join('');
+  const shedFilter = $('filterShed')?.value || '';
+  const mealFilter = $('filterMeal')?.value || '';
+
+  // 更新筛选下拉选项
+  const shedSet = new Set(records.map(r => r.shed));
+  const mealSet = new Set(records.map(r => r.meal));
+  if ($('filterShed')) {
+    const cur = $('filterShed').value;
+    $('filterShed').innerHTML = '<option value="">全部棚号</option>' +
+      [...shedSet].sort((a,b)=>num(a)-num(b)).map(s => `<option value="${s}"${s===cur?' selected':''}>${s}号棚</option>`).join('');
+  }
+  if ($('filterMeal')) {
+    const cur = $('filterMeal').value;
+    $('filterMeal').innerHTML = '<option value="">全部餐次</option>' +
+      [...mealSet].sort((a,b)=>num(a)-num(b)).map(m => `<option value="${m}"${m===cur?' selected':''}>${m}餐</option>`).join('');
+  }
+
+  // 筛选记录
+  let filtered = records.slice();
+  if (shedFilter) filtered = filtered.filter(r => String(r.shed) === shedFilter);
+  if (mealFilter) filtered = filtered.filter(r => String(r.meal) === mealFilter);
+
+  if (!filtered.length) { $('records').innerHTML = '<div class="empty">暂无记录。</div>'; return; }
+
+  // 按日期分组
+  const groups = {};
+  filtered.forEach(r => {
+    if (!groups[r.date]) groups[r.date] = [];
+    groups[r.date].push(r);
+  });
+  const dates = Object.keys(groups).sort((a,b) => b.localeCompare(a));
+
+  // 展开状态
+  const expanded = JSON.parse(localStorage.getItem('records_expanded') || '{}');
+
+  let html = '';
+  dates.forEach(date => {
+    const items = groups[date].sort((a,b) => num(a.shed)-num(b.shed) || num(a.meal)-num(b.meal));
+    const totalWeight = items.reduce((s, r) => s + num(r.weight), 0);
+    const isOpen = expanded[date] !== false; // 默认展开
+    html += `<div class="date-group">
+      <div class="date-header" onclick="toggleDateGroup('${date}')">
+        <span class="date-arrow">${isOpen ? '▼' : '▶'}</span>
+        <span class="strong">${date}</span>
+        <span class="muted">${items.length}条记录 · 合计 ${totalWeight.toFixed(2)}KG</span>
+      </div>
+      <div class="date-body" style="${isOpen ? '' : 'display:none'}">
+        ${items.map(r => {
+          const details = recordAddDetails(r);
+          const waterPct = recordWaterPercent(r);
+          const waterName = waterLabel(waterPct);
+          const waterJin = num(waterPct) > 0 ? num(r.waterAmountJin) : 0;
+          const adds = details.map(x => `<span class="pill">${x.name}</span>`).join('') + (waterName ? `<span class="pill">${waterName}</span>` : '') || '未选择';
+          const amount = details.map(x => `${x.name}: ${calcAmount(r.weight,x.dose,x.baseQty,x.baseUnit).toFixed(3)}${x.unit}`)
+            .concat(waterName ? [`${waterName}: ${waterJin.toFixed(3)}斤`] : []).join('；') || '无';
+          const opTime = r.operatedAt ? new Date(r.operatedAt).toLocaleString('zh-CN') : '';
+          const opLine = (r.operator || opTime) ? `<div class="muted">操作：${r.operator || '未知'}${opTime ? ' · ' + opTime : ''}</div>` : '';
+          return `<div class="record"><div class="split"><div class="strong">${r.groupLocation?`${r.groupLocation} · `:''}${r.shed}号棚 · ${r.meal}餐</div><div class="amount">${feedText(r)}</div></div><div class="muted">动保/水：${adds}</div><div class="muted">应添加：${amount}</div>${opLine}${r.note?`<div class="muted">备注：${r.note}</div>`:''}<div class="actions"><button class="secondary" onclick="editRecord('${r.id}')">修改</button><button class="danger" onclick="deleteRecord('${r.id}')">删除</button></div></div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  });
+  $('records').innerHTML = html;
+}
+
+function toggleDateGroup(date) {
+  const expanded = JSON.parse(localStorage.getItem('records_expanded') || '{}');
+  expanded[date] = expanded[date] === false ? true : false;
+  localStorage.setItem('records_expanded', JSON.stringify(expanded));
+  renderRecords();
 }
 
 // ========== 汇总 ==========
 function renderSummary() {
   const date = $('summaryDate').value;
-  const unit = $('summaryUnit')?.value || 'KG';
+  const unit = $('summaryUnit')?.value || '斤';
   const summary = {}, additives = {};
   records.filter(r => r.date === date).forEach(r => {
     if (!summary[r.shed]) summary[r.shed] = { meals: {}, total: 0, count: 0 };
@@ -617,20 +719,21 @@ function renderSummary() {
   html += `<td class="total">${fromKg(totalAll, unit).toFixed(2)}</td><td class="total">${fromKg(lifetimeAll, unit).toFixed(2)}</td></tr>`;
   $('summaryTable').innerHTML = html;
 
-  // 各棚称料汇总（投喂量 × 1.2）
+  // 各棚称料汇总（投喂量 × 系数）
+  const factor = num($('feedFactor')?.value || 1.2);
   let feedHtml = '<tr><th>棚号</th>';
   for (let m=1; m<=maxMeal; m++) feedHtml += `<th>${m}餐(${unit})</th>`;
   feedHtml += `<th>全天(${unit})</th><th>该棚累计称料(${unit})</th></tr>`;
   let feedTotalAll = 0, feedLifetimeAll = 0, feedMealTotals = {};
   for (let i=1; i<=summaryMaxShed; i++) {
     const r = summary[i] || { meals:{}, total:0, count:0 };
-    const feedTotal = r.total * 1.2;
-    const feedLifetime = (shedLifetimeTotals[i]||0) * 1.2;
+    const feedTotal = r.total * factor;
+    const feedLifetime = (shedLifetimeTotals[i]||0) * factor;
     feedTotalAll += feedTotal;
     feedLifetimeAll += feedLifetime;
     feedHtml += `<tr><td>${i}号</td>`;
     for (let m=1; m<=maxMeal; m++) {
-      const feedMeal = (r.meals[m]||0) * 1.2;
+      const feedMeal = (r.meals[m]||0) * factor;
       feedMealTotals[m] = (feedMealTotals[m]||0) + feedMeal;
       feedHtml += `<td>${fromKg(feedMeal, unit).toFixed(2)}</td>`;
     }
@@ -807,25 +910,29 @@ async function clearAll() {
 // ========== 导出 ==========
 function exportCSV() {
   if (!records.length) { alert('暂无记录可导出'); return; }
-  if (isOnline) {
-    window.location.href = '/api/export/csv';
-    return;
-  }
-  // 离线导出
+  // 直接用本地数据生成CSV下载（数据已同步到本地）
   const header = '日期,棚所在位置,棚号,餐次,喂餐量,单位,折合KG,动保/水,备注,操作员,操作时间';
   const lines = records.map(r => {
     const waterName = waterLabel(recordWaterPercent(r));
     const names = recordAddDetails(r).map(x=>x.name).concat(waterName?[waterName]:[]).join('；');
     const opTime = r.operatedAt ? new Date(r.operatedAt).toLocaleString('zh-CN') : '';
-    return [r.date, r.groupLocation||'', r.shed, r.meal, r.feedWeight??r.weight, r.feedUnit||'KG', r.weight, names, r.note||'', r.operator||'', opTime]
+    return [r.date, r.groupLocation||'', r.shed, r.meal, r.feedWeight??r.weight, r.feedUnit||'斤', r.weight, names, r.note||'', r.operator||'', opTime]
       .map(v=>`"${String(v).replaceAll('"','""')}"`).join(',');
   });
-  const blob = new Blob(['\ufeff'+[header].concat(lines).join('\n')], {type:'text/csv;charset=utf-8'});
+  const csvContent = '\ufeff' + [header].concat(lines).join('\n');
+  const blob = new Blob([csvContent], {type:'text/csv;charset=utf-8'});
+  // 用最兼容的方式下载
+  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
+  a.href = url;
   a.download = `养虾投喂记录_${today()}.csv`;
+  a.style.display = 'none';
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(a.href);
+  setTimeout(() => {
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 100);
 }
 
 function esc(v){ return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -842,7 +949,7 @@ function exportAllTable() {
     const detail = details.map(x => `${x.name}:${calcAmount(r.weight,x.dose,x.baseQty,x.baseUnit).toFixed(3)}${x.unit}`).concat(water?[water.text]:[]).join('；');
     const names = details.map(x => x.name).concat(water?[water.name]:[]).join('、');
     const opTime = r.operatedAt ? new Date(r.operatedAt).toLocaleString('zh-CN') : '';
-    rows += `<tr><td>${esc(r.date)}</td><td>${esc(r.groupLocation||'')}</td><td>${esc(r.shed)}号</td><td>${esc(r.meal)}餐</td><td>${esc(r.feedWeight??r.weight)}</td><td>${esc(r.feedUnit||'KG')}</td><td>${esc(Number(r.weight||0).toFixed(2))}</td><td>${esc(names)}</td><td>${esc(detail)}</td><td>${esc(r.note||'')}</td><td>${esc(r.operator||'')}</td><td>${esc(opTime)}</td></tr>`;
+    rows += `<tr><td>${esc(r.date)}</td><td>${esc(r.groupLocation||'')}</td><td>${esc(r.shed)}号</td><td>${esc(r.meal)}餐</td><td>${esc(r.feedWeight??r.weight)}</td><td>${esc(r.feedUnit||'斤')}</td><td>${esc(Number(r.weight||0).toFixed(2))}</td><td>${esc(names)}</td><td>${esc(detail)}</td><td>${esc(r.note||'')}</td><td>${esc(r.operator||'')}</td><td>${esc(opTime)}</td></tr>`;
   });
   const html = `<html><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>日期</th><th>棚所在位置</th><th>棚号</th><th>餐次</th><th>喂餐量</th><th>单位</th><th>折合KG</th><th>动保/水</th><th>应添加量明细</th><th>备注</th><th>操作员</th><th>操作时间</th></tr></thead><tbody>${rows}</tbody></table></body></html>`;
   const blob = new Blob(['\ufeff'+html], {type:'application/vnd.ms-excel;charset=utf-8'});
@@ -931,13 +1038,24 @@ async function init() {
   document.querySelectorAll('.tab').forEach(btn => btn.addEventListener('click', () => switchTab(btn.dataset.tab)));
   $('date').addEventListener('change', () => { if ($('date').value !== currentDate) { currentDate = $('date').value; clearDraftOnly(); } });
   $('shed').addEventListener('change', markShedUnsaved);
-  $('addMealBtn').addEventListener('click', addMeal);
   $('clearBtn').addEventListener('click', clearDraftOnly);
   $('exportBtn').addEventListener('click', exportCSV);
   $('exportAllTableBtn').addEventListener('click', exportAllTable);
   $('clearAllBtn').addEventListener('click', clearAll);
   $('summaryDate').addEventListener('input', renderSummary);
   $('summaryUnit').addEventListener('change', renderSummary);
+  $('feedFactor').addEventListener('input', () => {
+    localStorage.setItem('feedFactor', $('feedFactor').value);
+    renderSummary();
+  });
+  // 恢复上次的系数
+  const savedFactor = localStorage.getItem('feedFactor');
+  if (savedFactor) $('feedFactor').value = savedFactor;
+
+  // 记录筛选
+  $('filterShed').addEventListener('change', renderRecords);
+  $('filterMeal').addEventListener('change', renderRecords);
+
   $('addRecipeBtn').addEventListener('click', addRecipe);
   $('resetRecipeBtn').addEventListener('click', resetRecipes);
   $('groupLocation').addEventListener('input', () => localCache.set('shrimp_group_location', $('groupLocation').value.trim()));
